@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 /* importing express.js */
 
-
+app.set('view engine', 'pug');
 
 const path = require('path');
 
