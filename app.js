@@ -9,6 +9,7 @@ const path = require('path');
 
 const adminRouter = require('./routes/admin');
 
+app.use(express.static(path.join(__dirname,'/assets')))
 /* middlewares for routing */
 app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname, 'views','index.html'))
