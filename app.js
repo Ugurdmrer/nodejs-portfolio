@@ -13,7 +13,7 @@ const adminRouter = require('./routes/admin');
 app.use(express.static(path.join(__dirname,'/assets')))
 /* middlewares for routing */
 app.get('/',(req,res)=>{
-    res.render('index')
+    res.render('index',{title: 'Homepage'})
 });
 app.use('/admin',adminRouter)
 
@@ -21,7 +21,7 @@ app.use('/admin',adminRouter)
 
 app.use((req,res)=>{
     res.status(404);
-    res.send('<h1>404 sayfası</h1>');
+    res.send('<h1>404 sayfası</h1>',{title: 'Page not found'});
 });
 
 
